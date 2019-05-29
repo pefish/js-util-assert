@@ -1,8 +1,9 @@
 {
-  "name": "p-js-assert",
-  "version": "0.0.1",
+  "name": "@pefish/js-helper-assert",
+  "version": "0.0.2",
   "scripts": {
-    "build": "rm -rf lib && babel src -d lib"
+    "build": "rm -rf lib && babel src -d lib",
+    "prepublish": "yarn build"
   },
   "main": "lib/assert.js",
   "dependencies": {
@@ -26,6 +27,7 @@
     }
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0"
   }
 }
