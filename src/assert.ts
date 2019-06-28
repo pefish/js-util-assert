@@ -1,5 +1,6 @@
 /** @module */
-import ErrorHelper from 'p-js-error'
+import ErrorHelper from '@pefish/js-error'
+import BigNumber from "bignumber.js";
 
 function lte(me, val) {
   AssertUtil.canCast(me, 'bignumber')

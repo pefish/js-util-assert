@@ -1,6 +1,13 @@
-import 'node-assist'
-import assert from "assert"
+import * as assert from "assert"
 import AssertUtil from './assert'
+
+declare global {
+  namespace NodeJS {
+    interface Global {
+      logger: any;
+    }
+  }
+}
 
 describe('AssertUtil', () => {
 
@@ -20,7 +27,7 @@ describe('AssertUtil', () => {
       const result2 = AssertUtil.canCast('3566', 'integer', null, false)
       assert.strictEqual(result2, true)
     } catch (err) {
-      logger.error(err)
+      global.logger.error(err)
       assert.throws(() => {}, err)
     }
   })
