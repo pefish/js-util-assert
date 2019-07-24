@@ -1,14 +1,15 @@
 {
   "name": "@pefish/js-util-assert",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "build": "rm -rf lib types && tsc",
     "prepublish": "yarn build",
     "test": "mocha --require ts-node/register src/assert.test.ts"
   },
+  "types": "./types/assert.d.ts",
   "main": "lib/assert.js",
   "dependencies": {
-    "@pefish/js-error": "^0.0.5",
+    "@pefish/js-error": "^0.1.1",
     "bignumber.js": "^8.1.1"
   },
   "devDependencies": {
